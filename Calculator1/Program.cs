@@ -12,50 +12,72 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the calculator!\r\n Enter a number.");
             int firstNumber = 0;
             int secondNumber = 0;
+            bool repeatQ;
+            
+            
 
-            firstNumber = int.Parse(Console.ReadLine());
+            
 
-            Console.WriteLine("Enter a second number.");
-            secondNumber = int.Parse(Console.ReadLine());
+                Console.WriteLine("Welcome to the calculator!\r\n Enter a number.");
 
-            Console.WriteLine($"You entered {firstNumber} {secondNumber}");
-
-            Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide");
-
-
-
-
-
-            switch (Console.ReadLine())
+            while (repeatQ = true)
             {
-                case "a":
-                    Console.WriteLine($"{firstNumber} plus {secondNumber} is " + (firstNumber + secondNumber) + ", You really needed a calculator for that?");
-                    break;
 
-                case "s":
-                    Console.WriteLine($"{firstNumber} minus {secondNumber} is " + (firstNumber - secondNumber) + ", Alright alright you can put down your fingers now.");
-                    break;
+                firstNumber = int.Parse(Console.ReadLine());
 
-                case "m":
-                    Console.WriteLine($"Boop beep bo boop {firstNumber} times {secondNumber} is " + (firstNumber * secondNumber) + " now get out of my program");
-                    break;
+                Console.WriteLine("Enter a second number.");
+                secondNumber = int.Parse(Console.ReadLine());
 
-                case "d":
-                    Console.WriteLine("You know damn well you can divide by 0!");
-                    Console.WriteLine($"{firstNumber} divided by {secondNumber} is " + (firstNumber / secondNumber) + ", What ever happend to long division? Oh yeah... ME");
-                    break;
+                Console.WriteLine($"You entered {firstNumber} and {secondNumber}");
 
-                default:
-                    Console.WriteLine("You having a hard time reading bud?");
-                    break;
+                
 
+
+                if (secondNumber >= 1)
+                {
+                    Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide");
+                }
+                else
+                {
+                    Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide");
+                    Console.WriteLine("You better not try and divide with those numbers...");
+                }
+                
+                    
+
+
+                switch (Console.ReadLine())
+                {
+                    case "a":
+                        Console.WriteLine($"{firstNumber} plus {secondNumber} is " + (firstNumber + secondNumber) + ", You really needed a calculator for that?");
+                        break;
+
+                    case "s":
+                        Console.WriteLine($"{firstNumber} minus {secondNumber} is " + (firstNumber - secondNumber) + ", Alright alright you can put down your fingers now.");
+                        break;
+
+                    case "m":
+                        Console.WriteLine($"Boop beep bo boop {firstNumber} times {secondNumber} is " + (firstNumber * secondNumber) + " now get out of my program");
+                        break;
+
+                    case "d":
+                        Console.WriteLine($"{firstNumber} divided by {secondNumber} is " + (secondNumber / secondNumber) + " What ever happened to long divison?");
+                        break;
+                        
+                    default:
+                        Console.WriteLine("You having a hard time reading bud?");
+                        break;
+
+
+                }
+
+                    Console.WriteLine("Another equation?");
+                repeatQ = true;
 
             }
-
-
+            
             Console.ReadKey();
 
 
