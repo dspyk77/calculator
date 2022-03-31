@@ -21,7 +21,7 @@ namespace Calculator
             
 
                 Console.WriteLine("Welcome to the calculator!\r\n Enter a number.");
-
+            // attempting to loop the program. Program does loop but there is no way to break. work in progress...
             while (repeatQ = true)
             {
 
@@ -34,7 +34,7 @@ namespace Calculator
 
                 
 
-
+                // checking to make sure user wont divide by zero. Currently working more as a warning. If user divideds by zero program still crashes. work in progress... 
                 if (secondNumber >= 1)
                 {
                     Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide");
