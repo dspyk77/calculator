@@ -74,7 +74,7 @@ namespace Calculator
                 }
 
                     Console.WriteLine("Another equation?");
-                repeatQ = true;
+                
 
             }
             
