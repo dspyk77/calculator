@@ -38,11 +38,11 @@ namespace Calculator
                 }
                 else
                 {
-                    Console.WriteLine($" {firstNumber} is not a number... get out of here with the algebra shit");
+                    Console.WriteLine($" {firstNumber} is not a number... get out of here with the algebra shit. Try that again.");
+                    firstNumber = Console.ReadLine();
                 }
                 
                 secondNumber = Console.ReadLine();
-
                 
 
                 if (isNum2 = int.TryParse(secondNumber, out int overRideNum2))
@@ -51,7 +51,8 @@ namespace Calculator
                 }
                 else
                 {
-                    Console.WriteLine($" {secondNumber} is not a number... get out of here with the algebra shit");
+                    Console.WriteLine($" {secondNumber} is not a number... get out of here with the algebra shit. Try that again.");
+                    secondNumber = Console.ReadLine();
                 }
 
 
