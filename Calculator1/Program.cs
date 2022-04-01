@@ -23,7 +23,7 @@ namespace Calculator
             
 
                 Console.WriteLine("Welcome to the calculator!\r\n Enter a number.");
-            // attempting to loop the program. Program does loop but there is no way to break. work in progress...
+            // loops program until user if finished. ending each equation user is asked to continue or to press "x" to exit the program.
             while (repeatQ)
             {
                 
@@ -62,6 +62,8 @@ namespace Calculator
 
 
                 // checking to make sure user wont divide by zero. Currently working more as a warning. If user divideds by zero program still crashes. work in progress... 
+
+                // upon using Int32.TryParse to check if user entered a number - main code block wont work since the original var is a string
                 if (secondNumber >= 1)
                 {
                     Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide. press x to exit");
