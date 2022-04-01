@@ -12,32 +12,59 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            int firstNumber = 0;
-            int secondNumber = 0;
-            bool repeatQ;
+            string firstNumber;
+            string secondNumber;
+            
+            bool repeatQ = true;
+            bool isNum1, isNum2;
             
             
-
+            
             
 
                 Console.WriteLine("Welcome to the calculator!\r\n Enter a number.");
             // attempting to loop the program. Program does loop but there is no way to break. work in progress...
-            while (repeatQ = true)
+            while (repeatQ)
             {
-
-                firstNumber = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Enter a second number.");
-                secondNumber = int.Parse(Console.ReadLine());
-
-                Console.WriteLine($"You entered {firstNumber} and {secondNumber}");
+                
+                firstNumber = Console.ReadLine();
 
                 
+
+                if (isNum1 = Int32.TryParse(firstNumber, out int overRideNum))
+                {
+                    Console.WriteLine("Enter a second number.");
+ 
+                }
+                else
+                {
+                    Console.WriteLine($" {firstNumber} is not a number... get out of here with the algebra shit");
+                }
+                
+                secondNumber = Console.ReadLine();
+
+                
+
+                if (isNum2 = Int32.TryParse(secondNumber, out int overRideNum2))
+                {
+                    Console.WriteLine($"You entered {firstNumber} and {secondNumber}");
+                }
+                else
+                {
+                    Console.WriteLine($" {secondNumber} is not a number... get out of here with the algebra shit");
+                }
+
+
+
+
+
+
+
 
                 // checking to make sure user wont divide by zero. Currently working more as a warning. If user divideds by zero program still crashes. work in progress... 
                 if (secondNumber >= 1)
                 {
-                    Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide");
+                    Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide. press x to exit");
                 }
                 else
                 {
@@ -46,7 +73,7 @@ namespace Calculator
                 }
                 
                     
-
+                
 
                 switch (Console.ReadLine())
                 {
@@ -65,19 +92,25 @@ namespace Calculator
                     case "d":
                         Console.WriteLine($"{firstNumber} divided by {secondNumber} is " + (secondNumber / secondNumber) + " What ever happened to long divison?");
                         break;
-                        
+
                     default:
                         Console.WriteLine("You having a hard time reading bud?");
                         break;
 
 
                 }
-
-                    Console.WriteLine("Another equation?");
                 
+                    Console.WriteLine("Another equation? press x to exit");
+                
+                switch (Console.ReadLine())
+                {
+                    case "x":
+                        repeatQ = false;
+                        break;
+                }
 
             }
-            
+
             Console.ReadKey();
 
 
