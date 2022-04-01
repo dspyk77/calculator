@@ -64,9 +64,9 @@ namespace Calculator
                 // checking to make sure user wont divide by zero. Currently working more as a warning. If user divideds by zero program still crashes. work in progress... 
 
                 // upon using Int32.TryParse to check if user entered a number - main code block wont work since the original var is a string 
-                if (secondNumber >= 1)
+                if (overRideNum2 >= 1)
                 {
-                    Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide. press x to exit");
+                    Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide.");
                 }
                 else
                 {
@@ -80,19 +80,19 @@ namespace Calculator
                 switch (Console.ReadLine())
                 {
                     case "a":
-                        Console.WriteLine($"{firstNumber} plus {secondNumber} is " + (firstNumber + secondNumber) + ", You really needed a calculator for that?");
+                        Console.WriteLine($"{firstNumber} plus {secondNumber} is " + (overRideNum + overRideNum2) + ", You really needed a calculator for that?");
                         break;
 
                     case "s":
-                        Console.WriteLine($"{firstNumber} minus {secondNumber} is " + (firstNumber - secondNumber) + ", Alright alright you can put down your fingers now.");
+                        Console.WriteLine($"{firstNumber} minus {secondNumber} is " + (overRideNum - overRideNum2) + ", Alright alright you can put down your fingers now.");
                         break;
 
                     case "m":
-                        Console.WriteLine($"Boop beep bo boop {firstNumber} times {secondNumber} is " + (firstNumber * secondNumber) + " now get out of my program");
+                        Console.WriteLine($"Boop beep bo boop {firstNumber} times {secondNumber} is " + (overRideNum * overRideNum2) + " now get out of my program");
                         break;
 
                     case "d":
-                        Console.WriteLine($"{firstNumber} divided by {secondNumber} is " + (secondNumber / secondNumber) + " What ever happened to long divison?");
+                        Console.WriteLine($"{firstNumber} divided by {secondNumber} is " + (overRideNum / overRideNum2) + " What ever happened to long divison?");
                         break;
 
                     default:
