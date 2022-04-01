@@ -63,7 +63,6 @@ namespace Calculator
 
                 // checking to make sure user wont divide by zero. Currently working more as a warning. If user divideds by zero program still crashes. work in progress... 
 
-                // upon using Int32.TryParse to check if user entered a number - main code block wont work since the original var is a string 
                 if (overRideNum2 >= 1)
                 {
                     Console.WriteLine("Enter a to add, s to subtract, m to multiply or d to divide.");
