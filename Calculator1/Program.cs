@@ -31,7 +31,7 @@ namespace Calculator
 
                 
 
-                if (isNum1 = int.TryParse(firstNumber, out int overRideNum))
+                if (isNum1 = int.TryParse(firstNumber, out int firstNumberParsed))
                 {
                     Console.WriteLine("Enter a second number.");
  
@@ -45,7 +45,7 @@ namespace Calculator
                 secondNumber = Console.ReadLine();
                 
 
-                if (isNum2 = int.TryParse(secondNumber, out int overRideNum2))
+                if (isNum2 = int.TryParse(secondNumber, out int secondNumberParsed))
                 {
                     Console.WriteLine($"You entered {firstNumber} and {secondNumber}");
                 }
@@ -80,19 +80,19 @@ namespace Calculator
                 switch (Console.ReadLine())
                 {
                     case "a":
-                        Console.WriteLine($"{firstNumber} plus {secondNumber} is " + (overRideNum + overRideNum2) + ", You really needed a calculator for that?");
+                        Console.WriteLine($"{firstNumber} plus {secondNumber} is " + (firstNumberParsed + secondNumberParsed) + ", You really needed a calculator for that?");
                         break;
 
                     case "s":
-                        Console.WriteLine($"{firstNumber} minus {secondNumber} is " + (overRideNum - overRideNum2) + ", Alright alright you can put down your fingers now.");
+                        Console.WriteLine($"{firstNumber} minus {secondNumber} is " + (firstNumberParsed - secondNumberParsed) + ", Alright alright you can put down your fingers now.");
                         break;
 
                     case "m":
-                        Console.WriteLine($"Boop beep bo boop {firstNumber} times {secondNumber} is " + (overRideNum * overRideNum2) + " now get out of my program");
+                        Console.WriteLine($"Boop beep bo boop {firstNumber} times {secondNumber} is " + (firstNumberParsed * secondNumberParsed) + " now get out of my program");
                         break;
 
                     case "d":
-                        Console.WriteLine($"{firstNumber} divided by {secondNumber} is " + (overRideNum / overRideNum2) + " What ever happened to long divison?");
+                        Console.WriteLine($"{firstNumber} divided by {secondNumber} is " + (firstNumberParsed / secondNumberParsed) + " What ever happened to long divison?");
                         break;
 
                     default:
